@@ -1,0 +1,15 @@
+﻿<prism:PrismApplication x:Class="ServiceHub.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ServiceHub"
+             xmlns:prism="http://prismlibrary.com/">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/ServiceHub.Presentation;component/PresentationDictionary.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ServiceHub.Views;component/ViewsDictionary.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ServiceHub.Modules.Monitor;component/MonitorResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

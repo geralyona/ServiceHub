@@ -1,0 +1,48 @@
+{
+  "Name": "My RSS News hub",
+  "Description": "Someting that I like",
+  "Categories": [
+    {
+      "Name": "Main news",
+      "Description": "Some main news",
+      "News": [
+        {
+          "Title": "New train in city 1",
+          "ShortContent": "New train line in city was opened 1",
+          "TimeLabel": "2022-08-01T00:00:00-07:00",
+          "Source": "Wroclaw News"
+        },
+        {
+          "Title": "New train in city 2",
+          "ShortContent": "New train line in city was opened 2",
+          "TimeLabel": "2022-09-01T00:00:00-07:00",
+          "Source": "Wroclaw News"
+        }
+      ]
+    },
+    {
+      "Name": "Local news",
+      "Description": "Some local news",
+      "News": [
+        {
+          "Title": "New metro in city 1",
+          "ShortContent": "New metro line in city was opened 1",
+          "TimeLabel": "2019-08-01T00:00:00-07:00",
+          "Source": "Kyiv News"
+        },
+        {
+          "Title": "New train in city 2",
+          "ShortContent": "New train line in city was opened 2",
+          "TimeLabel": "2022-03-01T00:00:00-07:00",
+          "Source": "Kyiv News"
+        },
+        {
+          "Title": "New train in city 3",
+          "ShortContent": "New train line in city was opened 3",
+          "TimeLabel": "2023-02-01T00:00:00-07:00",
+          "Source": "Kyiv News"
+        }
+      ]
+    }
+  ]
+}

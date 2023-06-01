@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="System.Composition" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ServiceHub.Core\ServiceHub.Core.csproj" />
+    <ProjectReference Include="..\..\ServiceHub.Presentation\ServiceHub.Presentation.csproj" />
+    <ProjectReference Include="..\..\ServiceHub.ViewModels.Interfaces\ServiceHub.ViewModels.Interfaces.csproj" />
+    <ProjectReference Include="..\..\Services\ServiceHub.Services.Interfaces\ServiceHub.Services.Interfaces.csproj" />
+  </ItemGroup>
+</Project>

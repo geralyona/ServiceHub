@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="testrss.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\ServiceHub.Modules.Monitor\ServiceHub.Modules.Monitor.csproj" />
+    <ProjectReference Include="..\ServiceHub.Core\ServiceHub.Core.csproj" />
+    <ProjectReference Include="..\ServiceHub.Presentation\ServiceHub.Presentation.csproj" />
+    <ProjectReference Include="..\ServiceHub.Views\ServiceHub.Views.csproj" />
+    <ProjectReference Include="..\Services\ServiceHub.Services\ServiceHub.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="testrss.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

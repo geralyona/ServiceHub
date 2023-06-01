@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Geometry x:Key="TextFileGeometryKey">F1 M16,16z M0,0z M12,0L4,0A2,2,0,0,0,2,2L2,14A2,2,0,0,0,4,16L12,16A2,2,0,0,0,14,14L14,2A2,2,0,0,0,12,0z M5,4L11,4A0.5,0.5,0,0,1,11,5L5,5A0.5,0.5,0,0,1,5,4z M4.5,6.5A0.5,0.5,0,0,1,5,6L11,6A0.5,0.5,0,0,1,11,7L5,7A0.5,0.5,0,0,1,4.5,6.5z M5,8L11,8A0.5,0.5,0,0,1,11,9L5,9A0.5,0.5,0,0,1,5,8z M5,10L8,10A0.5,0.5,0,0,1,8,11L5,11A0.5,0.5,0,0,1,5,10z</Geometry>
+
+    <DrawingGroup x:Key="TextFileDrawingGroupKey" ClipGeometry="M0,0 V16 H16 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource TextFileGeometryKey}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="TextFileDrawingImageKey"
+                  Drawing="{StaticResource TextFileDrawingGroupKey}" />
+</ResourceDictionary>

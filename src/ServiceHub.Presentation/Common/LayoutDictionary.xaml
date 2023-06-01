@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- Control default margin -->
+    <Thickness x:Key="DefaultMarginKey">7</Thickness>
+    <Thickness x:Key="DefaultPaddingKey">5</Thickness>
+
+    <sys:Double x:Key="DefaultIconHeight">50</sys:Double>
+    <sys:Double x:Key="DefaultIconWidth">30</sys:Double>
+
+</ResourceDictionary>

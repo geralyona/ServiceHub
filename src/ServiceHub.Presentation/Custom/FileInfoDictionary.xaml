@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Common/CommonDictionary.xaml"/>
+        <ResourceDictionary Source="../Images/ImagesDictionary.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="FileIconWithNameDataTemplateKey">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Image Source="{StaticResource TextFileDrawingImageKey}"
+                   Height="{StaticResource DefaultIconHeight}" Width="{StaticResource DefaultIconWidth}"/>
+            <TextBlock Text="{Binding}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

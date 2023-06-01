@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodels="clr-namespace:ServiceHub.ViewModels.Custom;assembly=ServiceHub.ViewModels">
+
+    <DataTemplate DataType="{x:Type viewmodels:RootViewModel}" >
+        <Grid Margin="{StaticResource DefaultMarginKey}">
+            <TreeView ItemsSource="{Binding Items}" />
+        </Grid>
+    </DataTemplate>
+
+    <HierarchicalDataTemplate DataType="{x:Type viewmodels:ItemsViewModel}"
+                              ItemsSource="{Binding Items}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Name, Mode=OneWay}" FontStyle="Italic" Foreground="LightSeaGreen"/>
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+
+    <DataTemplate DataType="{x:Type viewmodels:KeyValueViewModel}">
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{Binding Key, Mode=OneWay}" HorizontalAlignment="Right" Foreground="DarkBlue"/>
+            <Label Content=":" HorizontalAlignment="Right" Foreground="DarkBlue"/>
+            <Label Content="{Binding Value.Text, Mode=OneWay}" FontStyle="Italic" Foreground="Chocolate"/>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

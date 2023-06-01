@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ServiceHub.Core\ServiceHub.Core.csproj" />
+    <ProjectReference Include="..\..\ServiceHub.ViewModels\ServiceHub.ViewModels.csproj" />
+    <ProjectReference Include="..\ServiceHub.Services.Interfaces\ServiceHub.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModelBuilders\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,58 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodels="clr-namespace:ServiceHub.ViewModels.RSS;assembly=ServiceHub.ViewModels"
+                    xmlns:local="clr-namespace:ServiceHub.Views.RssNews">
+
+    <DataTemplate DataType="{x:Type viewmodels:RssNewsHubViewModel}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Content="{Binding Name, Mode=OneWay}" HorizontalAlignment="Right" Foreground="DarkBlue"/>
+            <Label Content="{Binding Description, Mode=OneWay}" FontStyle="Italic" Foreground="Chocolate"/>
+            <TreeView Grid.Row="2" ItemsSource="{Binding Categories}">
+                <TreeView.ItemContainerStyleSelector>
+                    <local:RssTreeItemStyleSelector StyleCategory="{StaticResource UniformGridTreeViewItemKey}" StyleDefault="{StaticResource {x:Type TreeViewItem}}"/>
+                </TreeView.ItemContainerStyleSelector>
+            </TreeView>
+        </Grid>
+    </DataTemplate>
+
+    <HierarchicalDataTemplate DataType="{x:Type viewmodels:RssNewsCategory}"
+                              ItemsSource="{Binding News}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Name, Mode=OneWay}"/>
+            <Label Content="{Binding Description, Mode=OneWay}" FontStyle="Italic" Foreground="Chocolate"/>
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <DataTemplate DataType="{x:Type viewmodels:RssNews}" >
+        <Grid Margin="{StaticResource DefaultMarginKey}">
+            <Rectangle StrokeThickness="2" Stroke="Aquamarine" Fill="{StaticResource GradientBrushKey}"/>
+            <DockPanel LastChildFill="False" Margin="5">
+                <TextBlock Text="{Binding Title, Mode=OneWay}" DockPanel.Dock="Top" HorizontalAlignment="Center"/>
+                <TextBlock Text="{Binding ShortContent, Mode=OneWay}" DockPanel.Dock="Bottom"/>
+                <TextBlock Text="{Binding Source, Mode=OneWay}" DockPanel.Dock="Right">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="-45" />
+                    </TextBlock.LayoutTransform>
+                </TextBlock>
+
+                <TextBlock Text="{Binding TimeLabel, Mode=OneWay, StringFormat=d}" DockPanel.Dock="Left"/>
+                <Image x:Name="flagImage" MaxHeight="20" MaxWidth="20" DockPanel.Dock="Right"/>
+            </DockPanel>
+        </Grid>
+        <DataTemplate.Triggers>
+            <DataTrigger  Binding="{Binding Source}" Value="Kyiv News">
+                <Setter TargetName="flagImage" Property="Source" Value="{StaticResource UkraineFlagIconKey}"/>
+            </DataTrigger>
+            <DataTrigger  Binding="{Binding Source}" Value="Wroclaw News">
+                <Setter TargetName="flagImage" Property="Source" Value="{StaticResource PolishFlagIconKey}"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+</ResourceDictionary>
